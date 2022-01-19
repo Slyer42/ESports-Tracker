@@ -1,7 +1,7 @@
 <template>
   <div id="nav">
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about"><img src="../assets/logo.png"></router-link>
+    <router-link to="/">Home</router-link> 
+   <link rel="icon" type="image/png" href="(../assets/lol.jpg">
   </div>
   <router-view/>
 </template>
@@ -12,7 +12,7 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #2c3e50;
+  
 }
 
 #nav {
@@ -26,5 +26,9 @@
 
 #nav a.router-link-exact-active {
   color: #42b983;
+}
+#nav img {
+  max-width: 150px;
+  max-height: 140px;
 }
 </style>
