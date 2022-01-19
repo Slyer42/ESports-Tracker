@@ -1,5 +1,6 @@
 <template>
   <div id="nav">
+    Lol Esports Tracker
     <router-link to="/">Home</router-link> 
    <link rel="icon" type="image/png" href="(../assets/lol.jpg">
   </div>
@@ -18,7 +19,9 @@
 #nav {
   padding: 30px;
 }
-
+#nav div{
+  float:left;
+}
 #nav a {
   font-weight: bold;
   color: #2c3e50;

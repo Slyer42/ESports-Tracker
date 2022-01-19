@@ -1,7 +1,7 @@
 <template>
     <div id="team">
         <input class="Suche" v-model="searchTeam" placeholder="Nach welchem Team suchst du?" />
-        <button @click="showTeams()">Look up teams</button>
+        <button @click="showTeams()">Suche</button>
         <div v-if="searchTeam != ''">
             <div id="value" v-for="info in infos" :key="info">
                 <img v-bind:src="info.image_url" />
@@ -19,7 +19,7 @@ export default
         props: {
             info: String[Object],
         },
-        
+
         data() {
             return {
                 searchTeam: "",
@@ -32,7 +32,7 @@ export default
         methods: {
             showTeams() {
                 axios
-                    .get('https://api.pandascore.co/lol/teams?token=MX17ghiwqUduAdt__Ency9hu2Bqne1tsm1YAqBiyVrDAnF83oTQ ')
+                    .get('https://api.pandascore.co/lol/teams?token=MX17ghiwqUduAdt__Ency9hu2Bqne1tsm1YAqBiyVrDAnF83oTQ ',  this.searchTeam )
                     .then(response => this.infos = response.data)
                     .then(response => console.log(response))
             },
